@@ -235,6 +235,13 @@ body[data-view="sightrack"]{background:#030b1c}
 #apropos .btn,#apropos .tag{border-color:#4d93ff}
 #apropos .btn:hover{background:#4d93ff;border-color:#4d93ff;color:#000}
 
+
+/* Logo Primigenius : petit, centré, aux couleurs de la page */
+.plogo{text-align:center;margin:0 auto 18px}
+.plogo svg{width:74px;height:auto;display:inline-block}
+.plogo .lb{fill:#f0a030}
+.plogo .le{fill:#0b0603;stroke:#f0a030;stroke-width:25.46px;stroke-miterlimit:10}
+
 /* Lightbox */
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
 #lb img{max-width:100%;max-height:100%}
@@ -304,6 +311,13 @@ body[data-view="sightrack"]{background:#030b1c}
   </div>
 
   <div class="aboutrow">
+    <h3>Méthode</h3>
+    <div>
+      <p>J'aime relier la théorie à la pratique : chaque choix de conception, jusqu'à une couleur, doit pouvoir être justifié, de telle sorte que le dispositif éprouve les idées qu'il met en jeu plutôt que de les illustrer.</p>
+    </div>
+  </div>
+
+  <div class="aboutrow">
     <h3>Ce qui me motive</h3>
     <div>
       <p>Ce qui me porte tient en peu de choses : apprendre, découvrir, expérimenter. Face à un nouveau logiciel, un nouveau support ou une nouvelle technologie, je ne cherche pas à les maîtriser avant de m'y confronter mais à les éprouver, dans la mesure où c'est en les manipulant qu'on en comprend les possibilités. Attirée par l'innovation et le prototypage, là où tout reste à inventer, je mène chaque projet jusqu'à ses limites, parce que c'est là qu'une idée révèle ce qu'elle vaut.</p>
@@ -324,7 +338,7 @@ body[data-view="sightrack"]{background:#030b1c}
 
   <h3>Compétences</h3>
   <div class="skills">
-    <div class="skill"><strong>Unity</strong></div>
+    <div class="skill"><strong>Unity</strong><span>VR (OpenXR) et PC · interactions joueur (raycast, tags) · navigation par l'orientation de la tête · gestion de scène</span></div>
     <div class="skill"><strong>Blender</strong><span>UV / Modelling / Sculpting / Rigging</span></div>
     <div class="skill"><strong>Suite Adobe</strong><span>Illustrator, Photoshop, After Effects, InDesign</span></div>
     <div class="skill"><strong>C#</strong><span>Lecture, compréhension et modification de scripts de gameplay</span></div>
@@ -333,7 +347,7 @@ body[data-view="sightrack"]{background:#030b1c}
   <h3>Projets</h3>
   <ul class="tl">
     <li><div class="d">2024 – 2025</div><div><b><a class="lnk" href="#sightrack">Sightrack</a><span class="mtag">PC</span></b><span class="s">Puzzle d'exploration en vue subjective piloté par le regard (simulé à la souris). Système d'interaction par tags sous Unity (C#) : un raycast depuis la caméra déclenche déplacements lissés, saut, accroupissement, téléportation interpolée et rembobinage du temps.</span></div></li>
-    <li><div class="d">2025 – en cours</div><div><b><a class="lnk" href="#primigenius">Sightrack : Primigenius</a><span class="mtag">VR</span></b><span class="s">Jeu 3D en réalité virtuelle dont la navigation est indexée sur l'orientation de la tête, sans manette (Unity). Level design et environnement low poly modélisé sous Blender, pensé comme récit : échelle, ambiance, narration.</span></div></li>
+    <li><div class="d">2025 – en cours</div><div><b><a class="lnk" href="#primigenius">Sightrack : Primigenius</a><span class="mtag">VR</span></b><span class="s">Jeu 3D en réalité virtuelle dont la navigation est indexée sur l'orientation de la tête, sans manette (Unity, OpenXR). Level design et environnement low poly modélisé sous Blender, pensé comme récit : échelle, ambiance, narration.</span></div></li>
   </ul>
 
   <h3>Expériences</h3>
@@ -379,7 +393,7 @@ body[data-view="sightrack"]{background:#030b1c}
   <p>Le projet interroge notre rapport aux écrans à travers le pharmakon : ce qui soigne peut aussi empoisonner.</p>
 
   <h3>Mon rôle</h3>
-  <p>Game design du prototype et programmation gameplay dans Unity (C#, avec l'aide d'outils d'IA que je lis, comprends et corrige) : boucle de jeu, système d'interaction par tags et réglage des paramètres (vitesse, accélération, durée de téléportation, fenêtre de saut).</p>
+  <p>Game design du prototype et programmation gameplay dans Unity (C#, avec l'aide d'outils d'IA que je lis, comprends et corrige) : boucle de jeu, système d'interaction par tags et réglage des paramètres (vitesse, accélération, durée de téléportation, fenêtre de saut). L'ambiance visuelle (shaders, post-processing) est réglée par mes soins, et chaque choix, jusqu'aux couleurs, est justifié par le propos du projet.</p>
 
   <h3>Mécaniques</h3>
   <ul class="plain">
@@ -410,6 +424,13 @@ body[data-view="sightrack"]{background:#030b1c}
 <main id="primigenius" class="view" hidden>
  <div class="inner page">
   <a class="back" href="#">&lt; Retour</a>
+  <div class="plogo"><svg viewBox="0 0 665.74 697.48" role="img" aria-label="Logo de Sightrack : Primigenius" xmlns="http://www.w3.org/2000/svg">
+    <path class="lb" d="M505.65,500.96l13.27,196.52-99.67-196.52-43.17,196.52-43.23-196.52-43.17,196.52-43.17-196.52-99.67,196.52,13.27-196.52L0,618.6l73.67-196.52,62.42-230.64C136.1,85.7,220.14,0,323.78,0s187.68,85.7,187.68,191.44l80.66,230.64,73.62,196.52-160.08-117.63Z"/>
+    <ellipse class="le" cx="486.58" cy="323.36" rx="142.14" ry="144.94"/>
+    <ellipse class="le" cx="165.86" cy="323.36" rx="142.14" ry="144.94"/>
+    <path class="lb" d="M486.56,236.55c15.55,41.47,16.02,99.84,6.26,142.84-1.68,6.92-3.5,13.72-6.26,20.41-2.75-6.68-4.58-13.48-6.26-20.41-9.75-42.98-9.3-101.35,6.26-142.84h0Z"/>
+    <path class="lb" d="M165.55,237.4c15.55,41.47,16.02,99.84,6.26,142.84-1.68,6.92-3.5,13.72-6.26,20.41-2.75-6.68-4.58-13.48-6.26-20.41-9.75-42.98-9.3-101.35,6.26-142.84h0Z"/>
+  </svg></div>
   <h2 class="title">Sightrack : Primigenius</h2>
   <p class="meta">Jeu 3D en réalité virtuelle · navigation par l'orientation de la tête · 2025 – en cours</p>
   <div class="vtag"><span class="tag">Version VR</span></div>
@@ -423,12 +444,13 @@ body[data-view="sightrack"]{background:#030b1c}
   <p>Un jeu 3D jouable sur PC et en réalité virtuelle, où l'on se déplace et interagit uniquement avec l'orientation de la tête : pas de manette. Le choix du head tracking évite la fatigue visuelle d'un suivi des yeux et limite l'effet « Midas Touch », où tout ce que le regard touche se déclenche.</p>
 
   <h3>Mon rôle</h3>
-  <p>Conception du dispositif, game design et level design, prototypage dans Unity, modélisation et dépliage UV de l'environnement dans Blender. Le code est développé avec l'aide d'outils d'IA, que je lis, comprends et corrige.</p>
+  <p>Conception du dispositif, game design et level design, prototypage dans Unity, modélisation et dépliage UV de l'environnement dans Blender. Le code est développé avec l'aide d'outils d'IA, que je lis, comprends et corrige. Je règle moi-même les shaders et le post-processing, et je justifie chaque choix artistique, jusqu'aux couleurs, par le propos du projet.</p>
 
   <h3>Mécaniques</h3>
   <ul class="plain">
     <li>Interaction par tags et raycast depuis la caméra</li>
     <li>Déplacements adaptés au regard et à la VR</li>
+    <li>Développé sous OpenXR avec un casque Pico 2, transposable aux casques Meta</li>
     <li>Même jeu jouable sur PC et en VR</li>
   </ul>
 
@@ -439,8 +461,14 @@ body[data-view="sightrack"]{background:#030b1c}
     <li>Narration par l'espace (environmental storytelling)</li>
   </ul>
 
+  <h3>Ambiance</h3>
+  <ul class="plain">
+    <li>Shaders et post-processing réglés par mes soins</li>
+    <li>Couleur, lumière et contraste choisis pour servir le propos</li>
+  </ul>
+
   <h3>Technologies</h3>
-  <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span></div>
+  <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span><span class="tag">OpenXR</span></div>
 
   <h3>Captures</h3>
   <div class="slider" data-slider>
