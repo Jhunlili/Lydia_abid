@@ -77,15 +77,78 @@ footer.foot{margin-top:70px;font-size:13px;opacity:.5}
 
 /* Sightrack : Primigenius : sépia orange */
 #primigenius{background:#0b0603;max-width:none;min-height:100vh;color:#f6e3c8;--line:#3a2410}
-#primigenius > .inner{max-width:1100px}
+
 #primigenius h3,#primigenius .back:hover{color:#f0a030}
 #primigenius .back{color:#b08a5a}
-#primigenius .gallery figure{position:relative;overflow:hidden;background:#f0a030}
-#primigenius .gallery img{filter:sepia(1) saturate(2.4) hue-rotate(-12deg) brightness(.82) contrast(1.1);mix-blend-mode:normal;transition:filter .4s}
-#primigenius .gallery img:hover{filter:none}
-#primigenius .gallery figcaption{background:#0b0603;padding:8px 0 2px}
 #primigenius .video{border:1px solid #3a2410}
 body[data-view="primigenius"]{background:#0b0603}
+
+
+/* Mémoire : noir, blanc, accent orange */
+#memoire{--line:#2a2a2a}
+#memoire h3{color:#f0a030}
+#memoire .unused{border-left:2px solid #f0a030;padding:4px 0 4px 20px;margin:0 0 14px;max-width:720px;font-size:21px;line-height:1.5}
+.problematique{font-size:clamp(24px,3.6vw,40px);line-height:1.3;font-weight:300;max-width:900px;border-left:3px solid #f0a030;padding-left:22px;margin:6px 0 10px;letter-spacing:-.01em}
+.todo-text{opacity:.5}
+.btnrow{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 8px}
+.btn{display:inline-block;border:1px solid #fff;border-radius:0;padding:12px 26px;font-weight:400;font-size:16px}
+.btn:hover{background:#f0a030;border-color:#f0a030;color:#000}
+.pdfframe{width:100%;height:85vh;border:1px solid #333;margin-top:14px;background:#111}
+@media(max-width:720px){.pdfframe{display:none}}
+
+
+/* ---------- MISE EN PAGE ARTICLE ---------- */
+.page{max-width:980px;margin-left:auto;margin-right:auto}
+.page > h3,.page > p,.page > ul,.page > .todo,.page > .btnrow,.page > blockquote{max-width:720px;margin-left:auto;margin-right:auto}
+.page > h3{margin-bottom:12px}
+.page h2.title,.page > .meta{text-align:center}
+.page h2.title{margin-top:6px}
+.page .video{max-width:980px;margin-left:auto;margin-right:auto}
+.vcap{max-width:720px;margin:10px auto 0;text-align:center;font-size:15px;opacity:.7}
+.btnrow{justify-content:center}
+.headline{text-align:center;margin:10px auto 0;max-width:860px}
+.kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f0a030;font-weight:400;margin:0 auto 22px;max-width:none}
+.mtitle{font-weight:700;font-size:clamp(30px,5vw,56px);line-height:1.1;letter-spacing:-.015em;margin-bottom:16px}
+.msub{font-size:clamp(18px,2.2vw,24px);opacity:.75;margin:0 auto;max-width:640px;font-weight:300}
+.prob{text-align:center;margin:clamp(40px,6vw,70px) auto 10px;max-width:860px;padding-top:34px;position:relative}
+.prob::before{content:"";position:absolute;top:0;left:50%;width:60px;height:2px;background:#f0a030;transform:translateX(-50%)}
+.plabel{display:block;font-weight:700;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#f0a030;margin-bottom:16px}
+.prob .problematique{border:0;padding:0;margin:0 auto;max-width:860px;font-size:clamp(24px,3.4vw,38px);line-height:1.3;font-weight:300}
+
+/* Légendes des images */
+figcaption.cap{padding:12px 2px 4px;font-size:15px;line-height:1.45;opacity:1}
+figcaption.cap .n{display:block;font-size:12px;letter-spacing:.14em;color:#f0a030;font-weight:700;margin-bottom:2px}
+figcaption.cap strong{display:block;font-weight:700;font-size:16px;margin-bottom:3px}
+figcaption.cap .why{display:block;opacity:.78}
+
+
+.contactbar{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;margin:22px auto 8px;padding:22px 0;border-top:1px solid #2a2a2a;border-bottom:1px solid #2a2a2a;max-width:720px}
+.contactbar .loc{display:inline-flex;align-items:center;gap:7px;opacity:.75;padding:0 10px;font-size:16px}
+
+
+/* Blocs de texte : justifiés, interligne 1,5 (les listes ne changent pas) */
+.page p{text-align:justify;text-justify:inter-word;line-height:1.5;hyphens:auto;-webkit-hyphens:auto}
+.page .meta,.page .vcap,.page .kicker,.page .msub,.page .problematique{text-align:center;hyphens:manual;-webkit-hyphens:manual}
+
+
+.ph{aspect-ratio:16/9;max-width:980px;margin-left:auto;margin-right:auto;border:1px dashed #555;display:flex;align-items:center;justify-content:center;opacity:.55;font-size:16px}
+
+
+.tags{display:flex;flex-wrap:wrap;gap:10px;max-width:720px;margin:0 auto 14px}
+.tag{display:inline-block;border:1px solid currentColor;border-radius:0;padding:8px 18px;font-size:16px;font-weight:400;line-height:1.3}
+
+
+/* Slider d'images : une seule fenêtre, clic = image suivante */
+.slider{max-width:980px;margin:0 auto}
+.slide{display:none;margin:0}
+.slide.active{display:block;animation:slidein .35s ease}
+@keyframes slidein{from{opacity:0}to{opacity:1}}
+.slide img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;cursor:pointer;-webkit-user-select:none;user-select:none}
+.slidebar{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--line,#333)}
+.slidebar button{font:inherit;font-size:16px;color:inherit;background:none;border:1px solid currentColor;border-radius:0;padding:6px 18px;cursor:pointer}
+.slidebar .count{font-size:14px;letter-spacing:.14em;opacity:.7}
+#primigenius .slide img{filter:sepia(1) saturate(2.4) hue-rotate(-12deg) brightness(.82) contrast(1.1);transition:filter .4s}
+#primigenius .slide img:hover{filter:none}
 
 /* Lightbox */
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
@@ -108,76 +171,92 @@ body[data-view="primigenius"]{background:#0b0603}
     <div class="label">Projets</div>
     <a href="#sightrack"><span class="arrow">&gt;</span><span>Sightrack</span></a>
     <a href="#primigenius"><span class="arrow">&gt;</span><span>Sightrack : Primigenius</span></a>
+    <hr>
+    <div class="label">Recherche</div>
+    <a href="#memoire"><span class="arrow">&gt;</span><span>Mémoire de recherche</span></a>
   </nav>
 </main>
 
 <!-- ================= A PROPOS DE MOI ================= -->
-<main id="apropos" class="view" hidden>
+<main id="apropos" class="view page" hidden>
   <a class="back" href="#">&lt; Retour</a>
   <h2 class="title">Lydia Abid</h2>
-  <p class="meta">Game designer / level designer junior · concepteur d'expériences XR</p>
+  <p class="meta">Game designer / concepteur XR junior · Paris</p>
 
-  <p>Diplômée d'un Master Arts numériques et cultures visuelles (Université Gustave Eiffel, 2024–2026), je conçois des expériences 3D jouables sur PC et en VR. Je travaille dans Unity et Blender, et je cherche un poste de game designer / level designer junior, au plus près des équipes artistiques et des développeurs.</p>
+  <div class="contactbar">
+    <a class="btn" href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">LinkedIn</a>
+    <span class="loc"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Paris</span>
+  </div>
 
-  <h3>Expérience</h3>
-  <ul class="tl">
-    <li><div class="d">Depuis mars 2026</div><div><b>Barista – Starbucks (CDI)</b><span class="s">Accueil, préparation, mise en avant des produits, caisse</span></div></li>
-    <li><div class="d">2022</div><div><b>QA tester – Colorless</b><span class="s">Tests d'assurance qualité d'un jeu disponible sur Steam · dépliage UV et modélisation d'assets 3D dans Blender</span></div></li>
-    <li><div class="d">2022 – 2023</div><div><b>Graphiste e-sport</b><span class="s">Sentinel, Oracle</span></div></li>
-    <li><div class="d">Service civique</div><div><b>Cyberbase</b></div></li>
-  </ul>
-
-  <h3>Formation</h3>
-  <ul class="tl">
-    <li><div class="d">2024 – 2026</div><div><b>Master Arts numériques et cultures visuelles</b><span class="s">Université Gustave Eiffel · mémoire de recherche-création M2 : 15/20</span></div></li>
-    <li><div class="d">2020 – 2024</div><div><b>Licence Arts plastiques</b><span class="s">Université Paris 8</span></div></li>
-  </ul>
+  <h3>À propos de moi</h3>
+  <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des mécaniques d'interaction et des environnements 3D interactifs (Unity, Blender). J'ai créé Sightrack : Primigenius, un jeu 3D PC / VR piloté par l'orientation de la tête, et j'ai travaillé comme QA tester sur Colorless, disponible sur Steam. Je cherche un premier poste de game designer ou de concepteur XR, au sein d'une équipe d'artistes et de développeurs.</p>
 
   <h3>Compétences</h3>
   <ul class="plain">
-    <li>Unity : prototypage PC / VR, système d'interaction par tags (raycast), level design</li>
-    <li>C# : lecture, compréhension et modification de scripts de gameplay</li>
-    <li>Blender : modélisation low poly, sculpting, dépliage UV, rigging</li>
-    <li>Suite Adobe (Illustrator, Photoshop, InDesign, Lightroom, After Effects, Premiere Pro), Figma, Animate</li>
-    <li>HTML/CSS, Git, tablette graphique</li>
+    <li><b style="font-weight:700">Unity</b></li>
+    <li><b style="font-weight:700">Blender</b> ( UV / Modelling / Sculpting / Rigging )</li>
+    <li><b style="font-weight:700">Suite Adobe</b> ( Illustrator, Photoshop, After Effects, InDesign )</li>
+    <li><b style="font-weight:700">C#</b> : lecture, compréhension et modification de scripts de gameplay</li>
   </ul>
-  <p style="margin-top:14px;opacity:.75">Langues : français natif · anglais B1 · japonais A1.2</p>
 
-  <h3>Contact</h3>
-  <p class="contact">
-    <a href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a><br>
-    <a href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">linkedin.com/in/lydiaabid1</a><br>
-    <a href="https://www.youtube.com/watch?v=qcKtLs4hUA8" target="_blank" rel="noopener">YouTube – Sightrack : Primigenius</a>
-  </p>
+  <h3>Formations</h3>
+  <ul class="tl">
+    <li><div class="d">BAC+5 · 2024 – 2026</div><div><b>Master Arts numériques et cultures visuelles</b><span class="s">Université Gustave Eiffel, Noisy-le-Grand</span></div></li>
+    <li><div class="d">BAC+3 · 2020 – 2024</div><div><b>Licence Arts plastiques</b><span class="s">Université Paris 8, Saint-Denis</span></div></li>
+  </ul>
+
+  <h3>Expériences</h3>
+  <ul class="tl">
+    <li><div class="d">Depuis mars 2026</div><div><b>Barista – CDI</b><span class="s">Préparation, accueil des clients, mise en avant des produits, caisse et optimisation des ventes</span></div></li>
+    <li><div class="d">2022 – 2023</div><div><b>QA tester – Colorless, par Radcoon, Paris</b><span class="s">Tests d'assurance qualité (QA) du jeu. Dépliage UV (UV wrapping) et modélisation de plusieurs assets 3D dans Blender.</span></div></li>
+    <li><div class="d">Sept. 2023 – juil. 2024</div><div><b>Service civique – Cyberbase, Saint-Denis</b><span class="s">Accompagnement de jeunes adultes en création numérique et photographie. Montée en compétence sur la suite Adobe, photographie, captation, sensibilisation aux écrans.</span></div></li>
+    <li><div class="d">Juil. 2023 – févr. 2024</div><div><b>Graphiste – association Sentinel, Toulouse</b><span class="s">Création du logo et refonte graphique de la structure, formes vectorielles, patterns, affiches de tournoi.</span></div></li>
+    <li><div class="d">2023</div><div><b>Graphiste – Oracle</b><span class="s">Création d'affiches et modification de fichiers PSD.</span></div></li>
+  </ul>
+
   <footer class="foot">Mis à jour en novembre 2026</footer>
 </main>
 
 <!-- ================= SIGHTRACK (M1, PC) ================= -->
-<main id="sightrack" class="view" hidden>
+<main id="sightrack" class="view page" hidden>
   <a class="back" href="#">&lt; Retour</a>
-  <h2 class="title">Sightrack</h2>
-  <p class="meta">Mémoire de recherche-création, Master 1 · prototype jouable sur PC</p>
 
-  <p>Premier prototype de Sightrack, un jeu expérimental sur la frontière entre fascination pour les écrans et dépendance. Cette version se joue à la souris, avec un système de tags qui déclenche les actions du joueur.</p>
+  <header class="headline">
+    <p class="kicker">Prototype PC · 2024 – 2025</p>
+    <h2 class="mtitle">Sightrack</h2>
+    <p class="msub">Le regard comme seule interface de jeu : aucun bouton, aucune manette.</p>
+  </header>
 
-  <h3>Ce que j'ai fait</h3>
-  <ul class="plain">
-    <li>Conception du prototype et de ses mécaniques</li>
-    <li>Système d'interaction par tags (raycast depuis la caméra) dans Unity</li>
-    <li>Déplacements : avancer, reculer, sauter, s'accroupir</li>
-  </ul>
+  <!-- VIDÉO : remplace le bloc "ph" ci-dessous par :
+  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ID_DE_TA_VIDEO" title="Sightrack" allowfullscreen></iframe></div>
+  <p class="vcap">Légende de la vidéo.</p> -->
+  <div class="ph" style="margin-top:44px">Vidéo à venir</div>
+
+  <h3>Le projet</h3>
+  <p>Sightrack est un jeu vidéo expérimental qui explore la frontière entre fascination et dépendance face aux écrans. Le regard y devient la seule interface : ni bouton ni manette, seulement l'œil comme outil de navigation et d'action. Dans cette version sur PC, le regard est simulé par la souris.</p>
+  <p>Le joueur apprend en observant, contrôle par l'attention et progresse par la concentration. Il est guidé uniquement par les objets de l'environnement : ce sont eux qui décident de l'action, avancer, reculer, sauter ou autre.</p>
+  <p>Le projet s'appuie sur le principe du pharmakon : ce qui soigne peut aussi empoisonner. Le geste qui permet de jouer devient aussi un acte de dépendance. En imposant le regard comme seul moyen d'agir, Sightrack montre que notre attention est devenue une matière fragile et manipulable, une nouvelle monnaie : nous ne vendons plus notre âme au diable, nous vendons notre attention.</p>
+  <p>Le jeu s'adapte à nos habitudes visuelles et renvoie la question : qui observe qui ? Plus qu'un dispositif ludique, Sightrack est une expérience critique de l'attention. Fixer, suivre, scroller : nos gestes quotidiens façonnent notre rapport au monde numérique. Jouer devient une manière d'apprendre à voir autrement.</p>
+
+  <!-- IMAGES : remplace le bloc "ph" ci-dessous par un slider (une fenêtre, clic = image suivante).
+  Une image = un bloc <figure class="slide">. La première a "slide active". Exemple :
+  <div class="slider" data-slider>
+    <figure class="slide active"><img src="portfolio/img/NOM1.jpg" alt="Description"><figcaption class="cap"><span class="n">01</span><strong>Titre</strong><span class="why">Pourquoi on montre cette image.</span></figcaption></figure>
+    <figure class="slide"><img src="portfolio/img/NOM2.jpg" alt="Description"><figcaption class="cap"><span class="n">02</span><strong>Titre</strong><span class="why">Pourquoi on montre cette image.</span></figcaption></figure>
+    <div class="slidebar"><button type="button" class="prev">&lt;</button><span class="count">01 / 02</span><button type="button" class="next">&gt;</button></div>
+  </div> -->
+  <div class="ph" style="margin-top:34px">Image à venir</div>
 
   <h3>Technologies</h3>
-  <p>Unity · C# (avec l'aide de l'IA) · Blender</p>
+  <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span></div>
 
-  <h3>Images</h3>
-  <div class="todo">Images à venir.</div>
   <footer class="foot">Mis à jour en novembre 2026</footer>
 </main>
 
 <!-- ================= SIGHTRACK : PRIMIGENIUS (M2, VR) ================= -->
 <main id="primigenius" class="view" hidden>
- <div class="inner">
+ <div class="inner page">
   <a class="back" href="#">&lt; Retour</a>
   <h2 class="title">Sightrack : Primigenius</h2>
   <p class="meta">Mémoire de recherche-création, Master 2 · jeu 3D PC / VR piloté par la tête · en cours</p>
@@ -185,6 +264,7 @@ body[data-view="primigenius"]{background:#0b0603}
   <div class="video">
     <iframe src="https://www.youtube-nocookie.com/embed/qcKtLs4hUA8" title="Sightrack : Primigenius" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
+  <p class="vcap">Vidéo de présentation du jeu.</p>
 
   <h3>Concept</h3>
   <p>Un jeu 3D jouable sur PC et en réalité virtuelle, où l'on se déplace et interagit uniquement avec l'orientation de la tête : pas de manette. Le choix du head tracking évite la fatigue visuelle d'un suivi des yeux et limite l'effet « Midas Touch », où tout ce que le regard touche se déclenche.</p>
@@ -207,26 +287,55 @@ body[data-view="primigenius"]{background:#0b0603}
   </ul>
 
   <h3>Technologies</h3>
-  <p>Unity · Blender · C# (avec l'aide de l'IA)</p>
+  <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span></div>
 
   <h3>Captures</h3>
-  <div class="gallery">
-    <figure class="wide"><img src="portfolio/img/vue-dessus.jpg" alt="Vue de dessus de la scène" loading="lazy"><figcaption>Vue de dessus de la scène</figcaption></figure>
-    <figure><img src="portfolio/img/cuisine.jpg" alt="La cuisine" loading="lazy"><figcaption>La cuisine</figcaption></figure>
-    <figure><img src="portfolio/img/table.jpg" alt="La table" loading="lazy"><figcaption>La table</figcaption></figure>
-    <figure><img src="portfolio/img/cuisine-bas.jpg" alt="Point de vue au sol" loading="lazy"><figcaption>Point de vue au niveau du sol</figcaption></figure>
-    <figure><img src="portfolio/img/salon.jpg" alt="Le salon" loading="lazy"><figcaption>Le salon</figcaption></figure>
+  <div class="slider" data-slider>
+      <figure class="slide active"><img src="portfolio/img/vue-dessus.jpg" alt="Vue de dessus de la scène"><figcaption class="cap"><span class="n">01</span><strong>La pièce vue d'en haut</strong><span class="why">Pour lire le level design d'un coup d'œil : la table au centre organise l'espace, la cuisine occupe un côté, les objets guident le regard du joueur.</span></figcaption></figure>
+      <figure class="slide"><img src="portfolio/img/cuisine.jpg" alt="La cuisine"><figcaption class="cap"><span class="n">02</span><strong>La cuisine</strong><span class="why">Pour montrer le style low poly et les textures : des objets du quotidien, laissés en place, qui suggèrent une histoire.</span></figcaption></figure>
+      <figure class="slide"><img src="portfolio/img/table.jpg" alt="La table"><figcaption class="cap"><span class="n">03</span><strong>La table</strong><span class="why">Pour illustrer la narration par l'espace : repas, appareil photo, guitare, ce que contient la scène raconte ce qui s'y est passé.</span></figcaption></figure>
+      <figure class="slide"><img src="portfolio/img/cuisine-bas.jpg" alt="Point de vue au sol"><figcaption class="cap"><span class="n">04</span><strong>Au niveau du sol</strong><span class="why">Pour donner la notion d'échelle : vu d'en bas, le décor devient imposant. C'est le point de vue que vit le joueur en VR.</span></figcaption></figure>
+      <figure class="slide"><img src="portfolio/img/salon.jpg" alt="Le salon"><figcaption class="cap"><span class="n">05</span><strong>Le salon</strong><span class="why">Pour montrer l'ambiance et la composition : chaises, guitare, panier de linge, une scène arrêtée dans un moment de vie.</span></figcaption></figure>
+    <div class="slidebar"><button type="button" class="prev" aria-label="Image précédente">&lt;</button><span class="count">01 / 05</span><button type="button" class="next" aria-label="Image suivante">&gt;</button></div>
   </div>
+  <p class="vcap">Clique sur l'image pour faire défiler.</p>
   <footer class="foot">Mis à jour en novembre 2026 · survole une image pour voir sa couleur d'origine</footer>
  </div>
+</main>
+
+<!-- ================= MEMOIRE ================= -->
+<main id="memoire" class="view page" hidden>
+  <a class="back" href="#">&lt; Retour</a>
+
+  <header class="headline">
+    <p class="kicker">Mémoire de recherche-création · Master 2 · Université Gustave Eiffel</p>
+    <h2 class="mtitle">Le regard comme agent actif dans la transformation d'un environnement interactif</h2>
+    <p class="msub">Conception et expérimentation d'un dispositif immersif en réalité virtuelle</p>
+  </header>
+
+  <section class="prob">
+    <span class="plabel">Problématique</span>
+    <p class="problematique">Comment un dispositif de réalité virtuelle peut-il rendre perceptible le pouvoir transformateur du regard, permettant à l'utilisateur de se reconnaître comme agent actif de son environnement ?</p>
+  </section>
+
+  <h3>Démarche</h3>
+  <!-- ÉCRIS TON TEXTE ICI : remplace le paragraphe ci-dessous -->
+  <p class="todo-text">Texte à venir.</p>
+
+  <h3>Lire le mémoire</h3>
+  <div class="btnrow">
+    <a class="btn" href="memoire-m2-lydia-abid.pdf" download>Télécharger le PDF</a>
+  </div>
+  <iframe class="pdfframe" src="memoire-m2-lydia-abid.pdf#view=FitH" title="Mémoire de recherche-création (PDF)"></iframe>
+  <footer class="foot">Mis à jour en novembre 2026</footer>
 </main>
 
 <div id="lb"><img alt=""></div>
 
 <script>
 (function(){
-  var views=['home','apropos','sightrack','primigenius'];
-  var titles={home:'Lydia Abid',apropos:'À propos – Lydia Abid',sightrack:'Sightrack – Lydia Abid',primigenius:'Sightrack : Primigenius – Lydia Abid'};
+  var views=['home','apropos','sightrack','primigenius','memoire'];
+  var titles={home:'Lydia Abid',apropos:'À propos – Lydia Abid',sightrack:'Sightrack – Lydia Abid',primigenius:'Sightrack : Primigenius – Lydia Abid',memoire:'Mémoire de recherche-création – Lydia Abid'};
   function show(){
     var h=location.hash.replace('#','');
     if(views.indexOf(h)<0)h='home';
@@ -237,6 +346,32 @@ body[data-view="primigenius"]{background:#0b0603}
   }
   window.addEventListener('hashchange',show);
   show();
+
+
+  document.querySelectorAll('[data-slider]').forEach(function(sl){
+    var slides=sl.querySelectorAll('.slide'),count=sl.querySelector('.count'),i=0;
+    function pad(n){return (n<10?'0':'')+n;}
+    function go(n){
+      slides[i].classList.remove('active');
+      i=(n+slides.length)%slides.length;
+      slides[i].classList.add('active');
+      count.textContent=pad(i+1)+' / '+pad(slides.length);
+    }
+    slides.forEach(function(f){f.querySelector('img').addEventListener('click',function(){go(i+1);});});
+    sl.querySelector('.next').addEventListener('click',function(){go(i+1);});
+    sl.querySelector('.prev').addEventListener('click',function(){go(i-1);});
+    var x0=null;
+    sl.addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
+    sl.addEventListener('touchend',function(e){
+      if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;x0=null;
+      if(Math.abs(dx)>50)go(dx<0?i+1:i-1);
+    });
+    document.addEventListener('keydown',function(e){
+      if(sl.offsetParent===null)return;
+      if(e.key==='ArrowRight')go(i+1);
+      if(e.key==='ArrowLeft')go(i-1);
+    });
+  });
 
   var lb=document.getElementById('lb'),im=lb.querySelector('img');
   document.querySelectorAll('.gallery img').forEach(function(i){
