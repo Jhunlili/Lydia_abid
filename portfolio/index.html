@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lydia Abid – Junior Game Designer / Level Designer (XR)</title>
+<meta name="description" content="Portfolio de Lydia Abid, game designer et level designer junior (XR, VR, Unity, Blender). Projet : Sightrack : Primigenius, un jeu 3D piloté par l'orientation de la tête.">
+<style>
+:root{
+  --bg:#12100d; --panel:#1b1814; --line:#2e2923; --text:#efe9df; --muted:#a79f92; --accent:#f0a030;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:17px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header.nav{position:sticky;top:0;background:rgba(18,16,13,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+header.nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+header.nav strong{font-size:16px}
+header.nav nav a{color:var(--muted);margin-left:18px;font-size:15px}
+header.nav nav a:hover{color:var(--text);text-decoration:none}
+.hero{padding:72px 0 48px}
+.hero .tag{color:var(--accent);font-size:14px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(34px,6vw,56px);line-height:1.1;margin-bottom:18px}
+.hero p{color:var(--muted);max-width:640px;font-size:19px}
+.btns{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;border:1px solid var(--accent);font-weight:600;font-size:15px}
+.btn.primary{background:var(--accent);color:#1a1205}
+.btn:hover{text-decoration:none;opacity:.88}
+section{padding:48px 0;border-top:1px solid var(--line)}
+h2{font-size:28px;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:24px}
+.video{position:relative;padding-top:56.25%;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--line)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{font-size:18px;margin-bottom:10px;color:var(--accent)}
+.card ul{padding-left:18px;color:var(--muted)}
+.card li{margin-bottom:6px}
+.card p{color:var(--muted)}
+.facts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px}
+.facts span{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 14px;font-size:14px;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:8px}
+.gallery figure{background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gallery img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;cursor:zoom-in}
+.gallery figcaption{padding:10px 14px;font-size:14px;color:var(--muted)}
+.gallery figure.wide{grid-column:1/-1}
+.gallery figure.wide img{aspect-ratio:16/8}
+.tl{list-style:none}
+.tl li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:16px}
+.tl li:last-child{border:0}
+.tl .d{min-width:130px;color:var(--muted);font-size:15px}
+.tl b{display:block}
+.tl span.s{color:var(--muted);font-size:15px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px;text-align:center}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
+#lb img{max-width:100%;max-height:100%;border-radius:8px}
+@media(max-width:720px){
+  .cols{grid-template-columns:1fr}
+  header.nav nav a{margin-left:12px;font-size:14px}
+  .tl li{flex-direction:column;gap:2px}
+  .hero{padding:48px 0 32px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <strong>Lydia Abid</strong>
+    <nav>
+      <a href="#projet">Projet</a>
+      <a href="#competences">Compétences</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="tag">Game designer · Level designer · XR</div>
+    <h1>Lydia Abid<br>Junior Game Designer</h1>
+    <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des expériences 3D jouables sur PC et en réalité virtuelle. Mon projet principal, <em>Sightrack : Primigenius</em>, se pilote uniquement avec l'orientation de la tête, sans manette.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projet">Voir mon projet</a>
+      <a class="btn" href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:lydia.abid@hotmail.com">Me contacter</a>
+    </div>
+  </div>
+
+  <section id="projet">
+    <h2>Sightrack : Primigenius</h2>
+    <p class="sub">Projet de recherche-création (Master 1 – Master 2) · jeu 3D PC / VR piloté par la tête · en cours de développement</p>
+
+    <div class="video">
+      <iframe src="https://www.youtube-nocookie.com/embed/qcKtLs4hUA8" title="Sightrack : Primigenius – vidéo de gameplay" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Le concept</h3>
+        <p>Un dispositif de jeu où l'on se déplace et interagit uniquement avec l'orientation de la tête : pas de manette, pas de clavier. Ce choix de <b>head tracking</b> évite la fatigue visuelle d'un suivi des yeux et limite l'effet « Midas Touch » (tout ce que le regard touche se déclenche).</p>
+      </div>
+      <div class="card">
+        <h3>Mon rôle</h3>
+        <p>Conception du dispositif, game design et level design, prototypage dans Unity, modélisation et dépliage UV de l'environnement dans Blender. Le code est développé avec l'aide d'outils d'IA, que je lis, comprends et corrige.</p>
+      </div>
+    </div>
+
+    <div class="cols">
+      <div class="card">
+        <h3>Mécaniques (Unity)</h3>
+        <ul>
+          <li>Interaction par <b>tags</b> et raycast depuis la caméra (avancer, reculer, sauter, s'accroupir…)</li>
+          <li>Déplacements adaptés au regard et à la VR</li>
+          <li>Même jeu jouable sur PC et en VR</li>
+          <li>Prototype M1 jouable à la souris, puis passage à la VR en M2</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Environnement (Blender)</h3>
+        <ul>
+          <li>Décor 3D en style low poly</li>
+          <li>Modélisation des assets et dépliage UV</li>
+          <li>Narration par l'espace (environmental storytelling)</li>
+          <li>Level design de la scène</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="margin-top:44px;font-size:22px">Captures du jeu</h2>
+    <div class="gallery">
+      <figure class="wide"><img src="img/vue-dessus.jpg" alt="Vue de dessus de la scène de Sightrack" loading="lazy"><figcaption>Vue de dessus de la scène : composition de l'espace de jeu</figcaption></figure>
+      <figure><img src="img/cuisine.jpg" alt="La cuisine dans Sightrack" loading="lazy"><figcaption>La cuisine, assets low poly et textures</figcaption></figure>
+      <figure><img src="img/table.jpg" alt="La table du salon dans Sightrack" loading="lazy"><figcaption>La table : objets racontant l'histoire du lieu</figcaption></figure>
+      <figure><img src="img/cuisine-bas.jpg" alt="Point de vue au sol dans la cuisine" loading="lazy"><figcaption>Point de vue au niveau du sol</figcaption></figure>
+      <figure><img src="img/salon.jpg" alt="Le salon dans Sightrack" loading="lazy"><figcaption>Le salon : chaises, guitare, panier de linge</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="competences">
+    <h2>Compétences</h2>
+    <p class="sub">Outils utilisés dans mes projets</p>
+    <div class="cols">
+      <div class="card">
+        <h3>Game design / Unity</h3>
+        <ul>
+          <li>Game design et level design</li>
+          <li>Prototypage dans Unity (PC et VR)</li>
+          <li>Système d'interaction par tags (raycast)</li>
+          <li>C# : lecture, compréhension et modification de scripts de gameplay</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Blender</h3>
+        <ul>
+          <li>Modélisation low poly et sculpting</li>
+          <li>Dépliage UV (UV wrapping)</li>
+          <li>Rigging</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:24px">
+      <h3>Autres outils</h3>
+      <p>Suite Adobe (Illustrator, Photoshop, InDesign, Lightroom, After Effects, Premiere Pro) · Figma · Animate · HTML/CSS · Git · tablette graphique</p>
+    </div>
+  </section>
+
+  <section id="parcours">
+    <h2>Parcours</h2>
+    <p class="sub">Formation et expériences</p>
+    <ul class="tl">
+      <li><div class="d">2024 – 2026</div><div><b>Master Arts numériques et cultures visuelles</b><span class="s">Université Gustave Eiffel · mémoire de recherche-création M2 noté 15/20</span></div></li>
+      <li><div class="d">2020 – 2024</div><div><b>Licence Arts plastiques</b><span class="s">Université Paris 8</span></div></li>
+      <li><div class="d">2022</div><div><b>QA tester – Colorless</b><span class="s">Tests d'assurance qualité d'un jeu disponible sur Steam · UV et modélisation d'assets 3D dans Blender</span></div></li>
+      <li><div class="d">2022 – 2023</div><div><b>Graphiste e-sport & service civique</b><span class="s">Sentinel, Oracle, Cyberbase</span></div></li>
+      <li><div class="d">Depuis mars 2026</div><div><b>Barista – Starbucks (CDI)</b><span class="s">Accueil, préparation, mise en avant des produits, travail en équipe</span></div></li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p class="sub">Je recherche un poste de game designer / level designer junior (XR, VR, jeu 3D), au plus près des équipes artistiques et des développeurs.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://www.youtube.com/watch?v=qcKtLs4hUA8" target="_blank" rel="noopener">Vidéo YouTube</a>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>© 2026 Lydia Abid · Portfolio mis à jour en novembre 2026</footer>
+
+<div id="lb"><img alt=""></div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),im=lb.querySelector('img');
+  document.querySelectorAll('.gallery img').forEach(function(i){
+    i.addEventListener('click',function(){im.src=i.src;im.alt=i.alt;lb.style.display='flex';});
+  });
+  lb.addEventListener('click',function(){lb.style.display='none';});
+})();
+</script>
+</body>
+</html>
