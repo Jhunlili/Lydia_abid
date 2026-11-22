@@ -183,6 +183,31 @@ figcaption.cap .why{display:block;opacity:.78}
 .page .plabel{font-size:clamp(17px,2vw,20px);letter-spacing:.14em}
 .perso .plabel{margin-bottom:14px}
 
+
+/* Rectangles de version (PC / VR) */
+.mtag{display:inline-block;margin-left:16px;border:1px solid currentColor;padding:2px 10px;font-size:13px;letter-spacing:.14em;font-weight:400;line-height:1.5;vertical-align:middle;position:relative;top:-.12em}
+.vtag{text-align:center;margin:-14px auto 0}
+.vtag .tag{font-size:14px;letter-spacing:.12em;text-transform:uppercase;padding:6px 16px}
+
+/* Sightrack : ambiance bleutée */
+body[data-view="sightrack"]{background:#030b1c}
+#sightrack{background:#030b1c;max-width:none;min-height:100vh;color:#dce9ff;--line:#17325e}
+#sightrack h3,#sightrack .back:hover{color:#4d93ff}
+#sightrack .back{color:#7d93b8}
+#sightrack .tag{border-color:#4d93ff;color:#cfe0ff}
+#sightrack .video{border:1px solid #17325e}
+#sightrack figcaption.cap .n{color:#4d93ff}
+#sightrack .slidebar button{border-color:#4d93ff;color:#cfe0ff}
+
+
+/* CV : même accent violet que À propos */
+#cv{--line:#2a2a2a}
+#cv h3,#cv .plabel,#cv .lnk:hover{color:#a77bff}
+#cv .btn:hover{background:#a77bff;border-color:#a77bff;color:#000}
+#cv .tl li{--line:#2a2a2a}
+.lnk{border-bottom:1px solid currentColor}
+.tl b .mtag{margin-left:12px;font-size:12px}
+
 /* Lightbox */
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
 #lb img{max-width:100%;max-height:100%}
@@ -200,10 +225,11 @@ figcaption.cap .why{display:block;opacity:.78}
   <h1 class="name">Lydia Abid</h1>
   <nav class="menu" aria-label="Menu">
     <a href="#apropos"><span class="arrow">&gt;</span><span>A propos de moi</span></a>
+    <a href="#cv"><span class="arrow">&gt;</span><span>CV</span></a>
     <hr>
     <div class="label">Projets</div>
-    <a href="#sightrack"><span class="arrow">&gt;</span><span>Sightrack</span></a>
-    <a href="#primigenius"><span class="arrow">&gt;</span><span>Sightrack : Primigenius</span></a>
+    <a href="#sightrack"><span class="arrow">&gt;</span><span>Sightrack<span class="mtag">PC</span></span></a>
+    <a href="#primigenius"><span class="arrow">&gt;</span><span>Sightrack : Primigenius<span class="mtag">VR</span></span></a>
     <hr>
     <div class="label">Recherche</div>
     <a href="#memoire"><span class="arrow">&gt;</span><span>Mémoire de recherche</span></a>
@@ -213,8 +239,8 @@ figcaption.cap .why{display:block;opacity:.78}
 <!-- ================= A PROPOS DE MOI ================= -->
 <main id="apropos" class="view page" hidden>
   <a class="back" href="#">&lt; Retour</a>
-  <h2 class="title">Lydia Abid</h2>
-  <p class="meta">Game designer / concepteur XR junior · Paris</p>
+  <h2 class="title">À propos de moi</h2>
+  <p class="meta">Lydia Abid</p>
 
   <div class="contactbar">
     <a class="btn" href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a>
@@ -222,11 +248,22 @@ figcaption.cap .why{display:block;opacity:.78}
     <span class="loc"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Paris</span>
   </div>
 
-  <h3>À propos de moi</h3>
   <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des mécaniques d'interaction et des environnements 3D interactifs (Unity, Blender). J'ai créé Sightrack : Primigenius, un jeu 3D PC / VR piloté par l'orientation de la tête, et j'ai travaillé comme QA tester sur Colorless, disponible sur Steam. Je cherche un premier poste de game designer ou de concepteur XR, au sein d'une équipe d'artistes et de développeurs.</p>
   <div class="perso">
     <span class="plabel">En quelques mots</span>
     <p>Je suis Lydia Abid. Les nouvelles technologies m'attirent moins pour leurs outils que pour ce qu'elles rendent possible : un terrain d'innovation où le prototype permet d'éprouver une idée avant de la défendre. J'apprends vite de nouveaux logiciels, je me place volontairement hors de ma zone de confort et je mène chaque projet jusqu'à ses limites, parce que c'est là qu'une idée révèle ce qu'elle vaut. Créative, j'ai à cœur de pousser les idées de chacun : une idée prend sa valeur lorsqu'elle est partagée, confrontée, puis rendue jouable.</p>
+  </div>
+
+  <footer class="foot">Mis à jour en novembre 2026</footer>
+</main>
+
+<main id="cv" class="view page" hidden>
+  <a class="back" href="#">&lt; Retour</a>
+  <h2 class="title">CV</h2>
+  <p class="meta">Lydia Abid · Game designer / concepteur XR junior</p>
+
+  <div class="btnrow" style="margin:24px auto 8px">
+    <a class="btn" href="cv-lydia-abid.pdf" download>Télécharger le CV (PDF)</a>
   </div>
 
   <h3>Compétences</h3>
@@ -237,12 +274,20 @@ figcaption.cap .why{display:block;opacity:.78}
     <div class="skill"><strong>C#</strong><span>Lecture, compréhension et modification de scripts de gameplay</span></div>
   </div>
 
-  <h3>Langues</h3>
-  <div class="tags">
-    <span class="tag">Français · natif</span>
-    <span class="tag">Anglais · avancé</span>
-    <span class="tag">Polonais · débutante</span>
-  </div>
+  <h3>Projets</h3>
+  <ul class="tl">
+    <li><div class="d">2024 – 2025</div><div><b><a class="lnk" href="#sightrack">Sightrack</a><span class="mtag">PC</span></b><span class="s">Prototype jouable à la souris : le regard comme seule interface, guidé par un système d'interaction par tags.</span></div></li>
+    <li><div class="d">2025 – en cours</div><div><b><a class="lnk" href="#primigenius">Sightrack : Primigenius</a><span class="mtag">VR</span></b><span class="s">Jeu 3D en réalité virtuelle piloté par l'orientation de la tête, sans manette.</span></div></li>
+  </ul>
+
+  <h3>Expériences</h3>
+  <ul class="tl">
+    <li><div class="d">Depuis mars 2026</div><div><b>Barista – CDI</b><span class="s">Préparation, accueil des clients, mise en avant des produits, caisse et optimisation des ventes</span></div></li>
+    <li><div class="d">2022 – 2023</div><div><b>QA tester – <a class="lnk" href="https://store.steampowered.com/app/2247410/Colorless/?l=french" target="_blank" rel="noopener">Colorless ↗</a>, par Radcoon, Paris</b><span class="s">Tests d'assurance qualité (QA) du jeu. Dépliage UV (UV wrapping) et modélisation de plusieurs assets 3D dans Blender.</span></div></li>
+    <li><div class="d">Sept. 2023 – juil. 2024</div><div><b>Service civique – Cyberbase, Saint-Denis</b><span class="s">Accompagnement de jeunes adultes en création numérique et photographie. Montée en compétence sur la suite Adobe, photographie, captation, sensibilisation aux écrans.</span></div></li>
+    <li><div class="d">Juil. 2023 – févr. 2024</div><div><b>Graphiste – association Sentinel, Toulouse</b><span class="s">Création du logo et refonte graphique de la structure, formes vectorielles, patterns, affiches de tournoi.</span></div></li>
+    <li><div class="d">2023</div><div><b>Graphiste – Oracle</b><span class="s">Création d'affiches et modification de fichiers PSD.</span></div></li>
+  </ul>
 
   <h3>Formations</h3>
   <ul class="tl">
@@ -250,40 +295,47 @@ figcaption.cap .why{display:block;opacity:.78}
     <li><div class="d">BAC+3 · 2020 – 2024</div><div><b>Licence Arts plastiques</b><span class="s">Université Paris 8, Saint-Denis</span></div></li>
   </ul>
 
-  <h3>Expériences</h3>
-  <ul class="tl">
-    <li><div class="d">Depuis mars 2026</div><div><b>Barista – CDI</b><span class="s">Préparation, accueil des clients, mise en avant des produits, caisse et optimisation des ventes</span></div></li>
-    <li><div class="d">2022 – 2023</div><div><b>QA tester – Colorless, par Radcoon, Paris</b><span class="s">Tests d'assurance qualité (QA) du jeu. Dépliage UV (UV wrapping) et modélisation de plusieurs assets 3D dans Blender.</span></div></li>
-    <li><div class="d">Sept. 2023 – juil. 2024</div><div><b>Service civique – Cyberbase, Saint-Denis</b><span class="s">Accompagnement de jeunes adultes en création numérique et photographie. Montée en compétence sur la suite Adobe, photographie, captation, sensibilisation aux écrans.</span></div></li>
-    <li><div class="d">Juil. 2023 – févr. 2024</div><div><b>Graphiste – association Sentinel, Toulouse</b><span class="s">Création du logo et refonte graphique de la structure, formes vectorielles, patterns, affiches de tournoi.</span></div></li>
-    <li><div class="d">2023</div><div><b>Graphiste – Oracle</b><span class="s">Création d'affiches et modification de fichiers PSD.</span></div></li>
-  </ul>
+  <h3>Langues</h3>
+  <div class="tags">
+    <span class="tag">Français · natif</span>
+    <span class="tag">Anglais · avancé</span>
+    <span class="tag">Polonais · débutante</span>
+  </div>
 
   <footer class="foot">Mis à jour en novembre 2026</footer>
 </main>
 
 <!-- ================= SIGHTRACK (M1, PC) ================= -->
-<main id="sightrack" class="view page" hidden>
+<main id="sightrack" class="view" hidden>
+ <div class="inner page">
   <a class="back" href="#">&lt; Retour</a>
+  <h2 class="title">Sightrack</h2>
+  <p class="meta">Mémoire de recherche-création, Master 1 · prototype jouable à la souris · 2024 – 2025</p>
+  <div class="vtag"><span class="tag">Version PC</span></div>
 
-  <header class="headline">
-    <p class="kicker">Prototype PC · 2024 – 2025</p>
-    <h2 class="mtitle">Sightrack</h2>
-    <p class="msub">Le regard comme seule interface de jeu : aucun bouton, aucune manette.</p>
-  </header>
-
-  <div class="video" style="margin-top:44px">
+  <div class="video" style="margin-top:34px">
     <iframe src="https://www.youtube-nocookie.com/embed/dssIQ9QcOx4" title="Sightrack – vidéo du prototype" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <p class="vcap">Vidéo de présentation du prototype.</p>
 
-  <h3>Le projet</h3>
-  <p>Sightrack est un jeu vidéo expérimental qui explore la frontière entre fascination et dépendance face aux écrans. Le regard y devient la seule interface : ni bouton ni manette, seulement l'œil comme outil de navigation et d'action. Dans cette version sur PC, le regard est simulé par la souris.</p>
-  <p>Le joueur apprend en observant, contrôle par l'attention et progresse par la concentration. Il est guidé uniquement par les objets de l'environnement : ce sont eux qui décident de l'action, avancer, reculer, sauter ou autre.</p>
-  <p>Le projet s'appuie sur le principe du pharmakon : ce qui soigne peut aussi empoisonner. Le geste qui permet de jouer devient aussi un acte de dépendance. En imposant le regard comme seul moyen d'agir, Sightrack montre que notre attention est devenue une matière fragile et manipulable, une nouvelle monnaie : nous ne vendons plus notre âme au diable, nous vendons notre attention.</p>
-  <p>Le jeu s'adapte à nos habitudes visuelles et renvoie la question : qui observe qui ? Plus qu'un dispositif ludique, Sightrack est une expérience critique de l'attention. Fixer, suivre, scroller : nos gestes quotidiens façonnent notre rapport au monde numérique. Jouer devient une manière d'apprendre à voir autrement.</p>
+  <h3>Concept</h3>
+  <p>Sightrack explore la frontière entre fascination et dépendance face aux écrans. Le regard y est la seule interface : ni bouton ni manette. Dans cette version PC, il est simulé par la souris, et le joueur est guidé par les objets de l'environnement, qui décident de l'action : avancer, reculer, sauter…</p>
+  <p>Le projet s'appuie sur le pharmakon, ce qui soigne peut aussi empoisonner, et interroge notre attention, devenue une matière manipulable. Qui observe qui ?</p>
 
-  <h3>Images</h3>
+  <h3>Mon rôle</h3>
+  <p>Conception du prototype et de ses mécaniques de jeu, et mise en place dans Unity du système d'interaction par tags. Le code est développé avec l'aide d'outils d'IA, que je lis, comprends et corrige.</p>
+
+  <h3>Mécaniques</h3>
+  <ul class="plain">
+    <li>Interaction par tags et raycast depuis la caméra</li>
+    <li>Actions déclenchées par les objets : avancer, reculer, sauter, s'accroupir</li>
+    <li>Regard simulé par la souris</li>
+  </ul>
+
+  <h3>Technologies</h3>
+  <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span></div>
+
+  <h3>Captures</h3>
   <div class="slider" data-slider>
     <figure class="slide active"><img src="sightrack-1.png" alt="Salle verte aux paquets de cigarettes"><figcaption class="cap"><span class="n">01</span><strong>L'espace saturé</strong><span class="why">Pour montrer la dépendance mise en décor : des paquets de cigarettes forment des murs, dans une lumière verte étouffante.</span></figcaption></figure>
     <figure class="slide"><img src="sightrack-2.png" alt="Salle d'écrans lumineux vue à la première personne"><figcaption class="cap"><span class="n">02</span><strong>La salle d'écrans</strong><span class="why">Pour montrer le point de vue du joueur : un espace fait d'écrans lumineux, vu à la première personne, mains au premier plan.</span></figcaption></figure>
@@ -291,11 +343,8 @@ figcaption.cap .why{display:block;opacity:.78}
     <div class="slidebar"><button type="button" class="prev" aria-label="Image précédente">&lt;</button><span class="count">01 / 03</span><button type="button" class="next" aria-label="Image suivante">&gt;</button></div>
   </div>
   <p class="vcap">Clique sur l'image pour faire défiler.</p>
-
-  <h3>Technologies</h3>
-  <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span></div>
-
   <footer class="foot">Mis à jour en novembre 2026</footer>
+ </div>
 </main>
 
 <!-- ================= SIGHTRACK : PRIMIGENIUS (M2, VR) ================= -->
@@ -303,7 +352,8 @@ figcaption.cap .why{display:block;opacity:.78}
  <div class="inner page">
   <a class="back" href="#">&lt; Retour</a>
   <h2 class="title">Sightrack : Primigenius</h2>
-  <p class="meta">Mémoire de recherche-création, Master 2 · jeu 3D PC / VR piloté par la tête · en cours</p>
+  <p class="meta">Mémoire de recherche-création, Master 2 · jeu 3D piloté par l'orientation de la tête · en cours</p>
+  <div class="vtag"><span class="tag">Version VR</span></div>
 
   <div class="video">
     <iframe src="https://www.youtube-nocookie.com/embed/qcKtLs4hUA8" title="Sightrack : Primigenius" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -378,8 +428,8 @@ figcaption.cap .why{display:block;opacity:.78}
 
 <script>
 (function(){
-  var views=['home','apropos','sightrack','primigenius','memoire'];
-  var titles={home:'Lydia Abid',apropos:'À propos – Lydia Abid',sightrack:'Sightrack – Lydia Abid',primigenius:'Sightrack : Primigenius – Lydia Abid',memoire:'Mémoire de recherche-création – Lydia Abid'};
+  var views=['home','apropos','cv','sightrack','primigenius','memoire'];
+  var titles={home:'Lydia Abid',apropos:'À propos – Lydia Abid',cv:'CV – Lydia Abid',sightrack:'Sightrack – Lydia Abid',primigenius:'Sightrack : Primigenius – Lydia Abid',memoire:'Mémoire de recherche-création – Lydia Abid'};
   function show(){
     var h=location.hash.replace('#','');
     if(views.indexOf(h)<0)h='home';
