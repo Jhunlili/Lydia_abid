@@ -228,6 +228,13 @@ body[data-view="sightrack"]{background:#030b1c}
 .aboutrow p:last-child{margin-bottom:0}
 @media(max-width:760px){.aboutrow{grid-template-columns:1fr;gap:12px}}
 
+
+/* À propos de moi : accent bleu (titres et rectangles) */
+#apropos h3,#apropos .plabel,#apropos .contact a:hover{color:#4d93ff}
+#apropos .perso{border-color:#4d93ff}
+#apropos .btn,#apropos .tag{border-color:#4d93ff}
+#apropos .btn:hover{background:#4d93ff;border-color:#4d93ff;color:#000}
+
 /* Lightbox */
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
 #lb img{max-width:100%;max-height:100%}
@@ -271,14 +278,21 @@ body[data-view="sightrack"]{background:#030b1c}
   <div class="aboutrow">
     <h3>Profil</h3>
     <div>
-      <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des mécaniques d'interaction et des environnements 3D interactifs (Unity, Blender). J'ai créé Sightrack : Primigenius, un jeu 3D PC / VR piloté par l'orientation de la tête, et j'ai travaillé comme QA tester sur Colorless, disponible sur Steam. Je cherche un premier poste de game designer ou de concepteur XR, au sein d'une équipe d'artistes et de développeurs.</p>
+      <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des mécaniques d'interaction et des environnements 3D interactifs, dans la mesure où c'est par le jeu que la perception et l'action peuvent être pensées ensemble. J'ai créé Sightrack : Primigenius, un jeu 3D PC / VR piloté par l'orientation de la tête, et travaillé comme QA tester sur Colorless, disponible sur Steam. Je cherche un premier poste de game designer ou de concepteur XR, au sein d'une équipe d'artistes et de développeurs, de telle sorte que la conception se construise à plusieurs.</p>
+    </div>
+  </div>
+
+  <div class="aboutrow">
+    <h3>Parcours</h3>
+    <div>
+      <p>J'ai 25 ans. Ma licence d'Arts plastiques m'a permis d'apprendre une multitude de logiciels et d'étendre ma culture artistique, de telle sorte que j'ai pu trouver ce qui m'anime aujourd'hui : la conception d'expériences et d'environnements 3D. C'est durant ces années que j'ai expérimenté la modélisation et le dépliage UV, avant de me spécialiser en Master dans la création d'environnements et le level design, dont Sightrack : Primigenius est l'aboutissement.</p>
     </div>
   </div>
 
   <div class="aboutrow">
     <h3>Travail d'équipe</h3>
     <div>
-      <p>J'aime le travail d'équipe. Au fil de mes projets, j'ai souvent collaboré avec des développeurs, des monteurs vidéo et des profils communication, autour d'un même objectif : faire aboutir le projet. Je m'adapte à chaque interlocuteur, j'aime pousser les idées de chacun, les confronter, puis les voir devenir quelque chose de jouable, toujours dans la bonne humeur.</p>
+      <p>Le travail d'équipe n'est pas pour moi une contrainte mais une condition : au fil de mes projets, j'ai collaboré avec des profils divers, notamment des développeurs, autour d'un même objectif, de telle sorte que chaque idée trouve dans les compétences des autres le moyen de prendre forme. J'aime pousser les idées de chacun, les confronter puis les voir devenir quelque chose de jouable, et je le fais volontiers dans la bonne humeur.</p>
     </div>
   </div>
 
@@ -292,7 +306,7 @@ body[data-view="sightrack"]{background:#030b1c}
   <div class="aboutrow">
     <h3>Ce qui me motive</h3>
     <div>
-      <p>Ce qui me porte, c'est d'apprendre. Face à un nouveau logiciel, un nouveau support ou une nouvelle technologie, je me lance, j'expérimente, je comprends. Je suis attirée par l'innovation et le prototypage, là où tout reste à inventer, et je mène chaque projet jusqu'à ses limites, parce que c'est là qu'une idée révèle ce qu'elle vaut.</p>
+      <p>Ce qui me porte tient en peu de choses : apprendre, découvrir, expérimenter. Face à un nouveau logiciel, un nouveau support ou une nouvelle technologie, je ne cherche pas à les maîtriser avant de m'y confronter mais à les éprouver, dans la mesure où c'est en les manipulant qu'on en comprend les possibilités. Attirée par l'innovation et le prototypage, là où tout reste à inventer, je mène chaque projet jusqu'à ses limites, parce que c'est là qu'une idée révèle ce qu'elle vaut.</p>
     </div>
   </div>
 
@@ -318,8 +332,8 @@ body[data-view="sightrack"]{background:#030b1c}
 
   <h3>Projets</h3>
   <ul class="tl">
-    <li><div class="d">2024 – 2025</div><div><b><a class="lnk" href="#sightrack">Sightrack</a><span class="mtag">PC</span></b><span class="s">Prototype jouable à la souris : le regard comme seule interface, guidé par un système d'interaction par tags.</span></div></li>
-    <li><div class="d">2025 – en cours</div><div><b><a class="lnk" href="#primigenius">Sightrack : Primigenius</a><span class="mtag">VR</span></b><span class="s">Jeu 3D en réalité virtuelle piloté par l'orientation de la tête, sans manette.</span></div></li>
+    <li><div class="d">2024 – 2025</div><div><b><a class="lnk" href="#sightrack">Sightrack</a><span class="mtag">PC</span></b><span class="s">Puzzle d'exploration en vue subjective piloté par le regard (simulé à la souris). Système d'interaction par tags sous Unity (C#) : un raycast depuis la caméra déclenche déplacements lissés, saut, accroupissement, téléportation interpolée et rembobinage du temps.</span></div></li>
+    <li><div class="d">2025 – en cours</div><div><b><a class="lnk" href="#primigenius">Sightrack : Primigenius</a><span class="mtag">VR</span></b><span class="s">Jeu 3D en réalité virtuelle dont la navigation est indexée sur l'orientation de la tête, sans manette (Unity). Level design et environnement low poly modélisé sous Blender, pensé comme récit : échelle, ambiance, narration.</span></div></li>
   </ul>
 
   <h3>Expériences</h3>
@@ -333,7 +347,7 @@ body[data-view="sightrack"]{background:#030b1c}
 
   <h3>Formations</h3>
   <ul class="tl">
-    <li><div class="d">BAC+5 · 2024 – 2026</div><div><b>Master Arts numériques et cultures visuelles</b><span class="s">Université Gustave Eiffel, Noisy-le-Grand</span></div></li>
+    <li><div class="d">BAC+5 · 2024 – 2026</div><div><b>Master Arts numériques et cultures visuelles</b><span class="s">Université Gustave Eiffel, Noisy-le-Grand. Mémoire de recherche-création : Sightrack : Primigenius.</span></div></li>
     <li><div class="d">BAC+3 · 2020 – 2024</div><div><b>Licence Arts plastiques</b><span class="s">Université Paris 8, Saint-Denis</span></div></li>
   </ul>
 
@@ -352,7 +366,7 @@ body[data-view="sightrack"]{background:#030b1c}
  <div class="inner page">
   <a class="back" href="#">&lt; Retour</a>
   <h2 class="title">Sightrack</h2>
-  <p class="meta">Mémoire de recherche-création, Master 1 · prototype jouable à la souris · 2024 – 2025</p>
+  <p class="meta">Prototype jouable à la souris · Unity · 2024 – 2025</p>
   <div class="vtag"><span class="tag">Version PC</span></div>
 
   <div class="video" style="margin-top:34px">
@@ -361,17 +375,20 @@ body[data-view="sightrack"]{background:#030b1c}
   <p class="vcap">Vidéo de présentation du prototype.</p>
 
   <h3>Concept</h3>
-  <p>Sightrack explore la frontière entre fascination et dépendance face aux écrans. Le regard y est la seule interface : ni bouton ni manette. Dans cette version PC, il est simulé par la souris, et le joueur est guidé par les objets de l'environnement, qui décident de l'action : avancer, reculer, sauter…</p>
-  <p>Le projet s'appuie sur le pharmakon, ce qui soigne peut aussi empoisonner, et interroge notre attention, devenue une matière manipulable. Qui observe qui ?</p>
+  <p>Puzzle d'exploration en vue subjective où le regard est la seule interface : ni bouton ni manette. Dans cette version PC, le regard est simulé par la souris. La caméra lance un raycast, et les objets de l'environnement, balisés par des tags, déclenchent l'action.</p>
+  <p>Le projet interroge notre rapport aux écrans à travers le pharmakon : ce qui soigne peut aussi empoisonner.</p>
 
   <h3>Mon rôle</h3>
-  <p>Conception du prototype et de ses mécaniques de jeu, et mise en place dans Unity du système d'interaction par tags. Le code est développé avec l'aide d'outils d'IA, que je lis, comprends et corrige.</p>
+  <p>Game design du prototype et programmation gameplay dans Unity (C#, avec l'aide d'outils d'IA que je lis, comprends et corrige) : boucle de jeu, système d'interaction par tags et réglage des paramètres (vitesse, accélération, durée de téléportation, fenêtre de saut).</p>
 
   <h3>Mécaniques</h3>
   <ul class="plain">
-    <li>Interaction par tags et raycast depuis la caméra</li>
-    <li>Actions déclenchées par les objets : avancer, reculer, sauter, s'accroupir</li>
-    <li>Regard simulé par la souris</li>
+    <li>Raycast depuis la caméra : le tag détecté déclenche l'action</li>
+    <li>Déplacement avant et arrière, lissé par accélération et décélération</li>
+    <li>Téléportation interpolée vers la surface visée</li>
+    <li>Saut avec fenêtre de tolérance (jump buffer)</li>
+    <li>Accroupissement, temporaire ou stable</li>
+    <li>Rembobinage du temps : relecture de l'historique des positions et rotations</li>
   </ul>
 
   <h3>Technologies</h3>
@@ -394,7 +411,7 @@ body[data-view="sightrack"]{background:#030b1c}
  <div class="inner page">
   <a class="back" href="#">&lt; Retour</a>
   <h2 class="title">Sightrack : Primigenius</h2>
-  <p class="meta">Mémoire de recherche-création, Master 2 · jeu 3D piloté par l'orientation de la tête · en cours</p>
+  <p class="meta">Jeu 3D en réalité virtuelle · navigation par l'orientation de la tête · 2025 – en cours</p>
   <div class="vtag"><span class="tag">Version VR</span></div>
 
   <div class="video">
