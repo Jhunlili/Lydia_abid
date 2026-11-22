@@ -72,7 +72,7 @@ footer.foot{margin-top:70px;font-size:13px;opacity:.5}
 #apropos .tl li{--line:#2a2a2a}
 
 /* Sightrack : noir et blanc pur */
-#sightrack img{filter:grayscale(1) contrast(1.05)}
+
 #sightrack h3{color:#fff}
 
 /* Sightrack : Primigenius : sépia orange */
@@ -162,6 +162,27 @@ figcaption.cap .why{display:block;opacity:.78}
 @media(max-width:860px){.skills{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:460px){.skills{grid-template-columns:1fr}}
 
+
+.perso{max-width:720px;margin:26px auto 8px;border:1px solid #f0a030;padding:24px 26px 12px}
+.perso .plabel{margin-bottom:12px}
+
+
+/* À propos de moi : accent violet */
+#apropos h3,#apropos .plabel,#apropos .contact a:hover{color:#a77bff}
+#apropos .perso{border-color:#a77bff}
+#apropos .btn:hover{background:#a77bff;border-color:#a77bff;color:#000}
+
+
+/* Titres et sous-titres agrandis */
+.page h2.title{font-size:clamp(38px,6vw,64px);line-height:1.08;letter-spacing:-.015em}
+.page .meta{font-size:clamp(17px,2vw,20px)}
+.page h3{font-size:clamp(20px,2.4vw,25px);letter-spacing:.08em;margin-top:60px;margin-bottom:16px}
+.page .mtitle{font-size:clamp(34px,5.8vw,66px)}
+.page .msub{font-size:clamp(20px,2.6vw,28px)}
+.page .kicker{font-size:15px}
+.page .plabel{font-size:clamp(17px,2vw,20px);letter-spacing:.14em}
+.perso .plabel{margin-bottom:14px}
+
 /* Lightbox */
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
 #lb img{max-width:100%;max-height:100%}
@@ -203,6 +224,10 @@ figcaption.cap .why{display:block;opacity:.78}
 
   <h3>À propos de moi</h3>
   <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des mécaniques d'interaction et des environnements 3D interactifs (Unity, Blender). J'ai créé Sightrack : Primigenius, un jeu 3D PC / VR piloté par l'orientation de la tête, et j'ai travaillé comme QA tester sur Colorless, disponible sur Steam. Je cherche un premier poste de game designer ou de concepteur XR, au sein d'une équipe d'artistes et de développeurs.</p>
+  <div class="perso">
+    <span class="plabel">En quelques mots</span>
+    <p>Je suis Lydia Abid. Les nouvelles technologies m'attirent moins pour leurs outils que pour ce qu'elles rendent possible : un terrain d'innovation où le prototype permet d'éprouver une idée avant de la défendre. J'apprends vite de nouveaux logiciels, je me place volontairement hors de ma zone de confort et je mène chaque projet jusqu'à ses limites, parce que c'est là qu'une idée révèle ce qu'elle vaut. Créative, j'ai à cœur de pousser les idées de chacun : une idée prend sa valeur lorsqu'elle est partagée, confrontée, puis rendue jouable.</p>
+  </div>
 
   <h3>Compétences</h3>
   <div class="skills">
@@ -210,6 +235,13 @@ figcaption.cap .why{display:block;opacity:.78}
     <div class="skill"><strong>Blender</strong><span>UV / Modelling / Sculpting / Rigging</span></div>
     <div class="skill"><strong>Suite Adobe</strong><span>Illustrator, Photoshop, After Effects, InDesign</span></div>
     <div class="skill"><strong>C#</strong><span>Lecture, compréhension et modification de scripts de gameplay</span></div>
+  </div>
+
+  <h3>Langues</h3>
+  <div class="tags">
+    <span class="tag">Français · natif</span>
+    <span class="tag">Anglais · avancé</span>
+    <span class="tag">Polonais · débutante</span>
   </div>
 
   <h3>Formations</h3>
@@ -240,10 +272,10 @@ figcaption.cap .why{display:block;opacity:.78}
     <p class="msub">Le regard comme seule interface de jeu : aucun bouton, aucune manette.</p>
   </header>
 
-  <!-- VIDÉO : remplace le bloc "ph" ci-dessous par :
-  <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/ID_DE_TA_VIDEO" title="Sightrack" allowfullscreen></iframe></div>
-  <p class="vcap">Légende de la vidéo.</p> -->
-  <div class="ph" style="margin-top:44px">Vidéo à venir</div>
+  <div class="video" style="margin-top:44px">
+    <iframe src="https://www.youtube-nocookie.com/embed/dssIQ9QcOx4" title="Sightrack – vidéo du prototype" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <p class="vcap">Vidéo de présentation du prototype.</p>
 
   <h3>Le projet</h3>
   <p>Sightrack est un jeu vidéo expérimental qui explore la frontière entre fascination et dépendance face aux écrans. Le regard y devient la seule interface : ni bouton ni manette, seulement l'œil comme outil de navigation et d'action. Dans cette version sur PC, le regard est simulé par la souris.</p>
@@ -251,14 +283,14 @@ figcaption.cap .why{display:block;opacity:.78}
   <p>Le projet s'appuie sur le principe du pharmakon : ce qui soigne peut aussi empoisonner. Le geste qui permet de jouer devient aussi un acte de dépendance. En imposant le regard comme seul moyen d'agir, Sightrack montre que notre attention est devenue une matière fragile et manipulable, une nouvelle monnaie : nous ne vendons plus notre âme au diable, nous vendons notre attention.</p>
   <p>Le jeu s'adapte à nos habitudes visuelles et renvoie la question : qui observe qui ? Plus qu'un dispositif ludique, Sightrack est une expérience critique de l'attention. Fixer, suivre, scroller : nos gestes quotidiens façonnent notre rapport au monde numérique. Jouer devient une manière d'apprendre à voir autrement.</p>
 
-  <!-- IMAGES : remplace le bloc "ph" ci-dessous par un slider (une fenêtre, clic = image suivante).
-  Une image = un bloc <figure class="slide">. La première a "slide active". Exemple :
+  <h3>Images</h3>
   <div class="slider" data-slider>
-    <figure class="slide active"><img src="portfolio/img/NOM1.jpg" alt="Description"><figcaption class="cap"><span class="n">01</span><strong>Titre</strong><span class="why">Pourquoi on montre cette image.</span></figcaption></figure>
-    <figure class="slide"><img src="portfolio/img/NOM2.jpg" alt="Description"><figcaption class="cap"><span class="n">02</span><strong>Titre</strong><span class="why">Pourquoi on montre cette image.</span></figcaption></figure>
-    <div class="slidebar"><button type="button" class="prev">&lt;</button><span class="count">01 / 02</span><button type="button" class="next">&gt;</button></div>
-  </div> -->
-  <div class="ph" style="margin-top:34px">Image à venir</div>
+    <figure class="slide active"><img src="sightrack-1.jpg" alt="Salle verte aux paquets de cigarettes"><figcaption class="cap"><span class="n">01</span><strong>L'espace saturé</strong><span class="why">Pour montrer la dépendance mise en décor : des paquets de cigarettes forment des murs, dans une lumière verte étouffante.</span></figcaption></figure>
+    <figure class="slide"><img src="sightrack-2.jpg" alt="Salle d'écrans lumineux vue à la première personne"><figcaption class="cap"><span class="n">02</span><strong>La salle d'écrans</strong><span class="why">Pour montrer le point de vue du joueur : un espace fait d'écrans lumineux, vu à la première personne, mains au premier plan.</span></figcaption></figure>
+    <figure class="slide"><img src="sightrack-3.jpg" alt="Icône d'œil au centre de l'écran, objets colorés"><figcaption class="cap"><span class="n">03</span><strong>Le regard comme interface</strong><span class="why">Pour montrer le principe du jeu : l'icône d'œil au centre figure le regard, et les objets de l'environnement guident l'action.</span></figcaption></figure>
+    <div class="slidebar"><button type="button" class="prev" aria-label="Image précédente">&lt;</button><span class="count">01 / 03</span><button type="button" class="next" aria-label="Image suivante">&gt;</button></div>
+  </div>
+  <p class="vcap">Clique sur l'image pour faire défiler.</p>
 
   <h3>Technologies</h3>
   <div class="tags"><span class="tag">Unity</span><span class="tag">Blender</span><span class="tag">C#</span></div>
