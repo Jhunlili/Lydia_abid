@@ -219,6 +219,15 @@ body[data-view="sightrack"]{background:#030b1c}
 .pdfframe{width:min(1240px,96vw);height:170vh;min-height:1300px;position:relative;left:50%;transform:translateX(-50%);display:block}
 @media(max-width:720px){.pdfframe{display:none}}
 
+
+/* À propos : mise en page éditoriale (titre à gauche, texte à droite) */
+.aboutrow{display:grid;grid-template-columns:230px 1fr;gap:34px;max-width:980px;margin:0 auto;padding:30px 0;border-top:1px solid #2a2a2a}
+.aboutrow:last-of-type{border-bottom:1px solid #2a2a2a}
+.aboutrow h3{margin:0;font-size:clamp(18px,2vw,22px);line-height:1.25;letter-spacing:.06em}
+.aboutrow p{margin:0 0 14px}
+.aboutrow p:last-child{margin-bottom:0}
+@media(max-width:760px){.aboutrow{grid-template-columns:1fr;gap:12px}}
+
 /* Lightbox */
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
 #lb img{max-width:100%;max-height:100%}
@@ -259,10 +268,32 @@ body[data-view="sightrack"]{background:#030b1c}
     <span class="loc"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Paris</span>
   </div>
 
-  <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des mécaniques d'interaction et des environnements 3D interactifs (Unity, Blender). J'ai créé Sightrack : Primigenius, un jeu 3D PC / VR piloté par l'orientation de la tête, et j'ai travaillé comme QA tester sur Colorless, disponible sur Steam. Je cherche un premier poste de game designer ou de concepteur XR, au sein d'une équipe d'artistes et de développeurs.</p>
-  <div class="perso">
-    <span class="plabel">En quelques mots</span>
-    <p>Je suis Lydia Abid. Les nouvelles technologies m'attirent moins pour leurs outils que pour ce qu'elles rendent possible : un terrain d'innovation où le prototype permet d'éprouver une idée avant de la défendre. J'apprends vite de nouveaux logiciels, je me place volontairement hors de ma zone de confort et je mène chaque projet jusqu'à ses limites, parce que c'est là qu'une idée révèle ce qu'elle vaut. Créative, j'ai à cœur de pousser les idées de chacun : une idée prend sa valeur lorsqu'elle est partagée, confrontée, puis rendue jouable.</p>
+  <div class="aboutrow">
+    <h3>Profil</h3>
+    <div>
+      <p>Diplômée d'un Master Arts numériques et cultures visuelles, je conçois des mécaniques d'interaction et des environnements 3D interactifs (Unity, Blender). J'ai créé Sightrack : Primigenius, un jeu 3D PC / VR piloté par l'orientation de la tête, et j'ai travaillé comme QA tester sur Colorless, disponible sur Steam. Je cherche un premier poste de game designer ou de concepteur XR, au sein d'une équipe d'artistes et de développeurs.</p>
+    </div>
+  </div>
+
+  <div class="aboutrow">
+    <h3>Travail d'équipe</h3>
+    <div>
+      <p>J'aime le travail d'équipe. Au fil de mes projets, j'ai souvent collaboré avec des développeurs, des monteurs vidéo et des profils communication, autour d'un même objectif : faire aboutir le projet. Je m'adapte à chaque interlocuteur, j'aime pousser les idées de chacun, les confronter, puis les voir devenir quelque chose de jouable, toujours dans la bonne humeur.</p>
+    </div>
+  </div>
+
+  <div class="aboutrow">
+    <h3>Qualités</h3>
+    <div>
+      <div class="tags" style="margin:0"><span class="tag">Adaptable</span><span class="tag">Curieuse</span><span class="tag">Déterminée</span><span class="tag">Organisée</span></div>
+    </div>
+  </div>
+
+  <div class="aboutrow">
+    <h3>Ce qui me motive</h3>
+    <div>
+      <p>Ce qui me porte, c'est d'apprendre. Face à un nouveau logiciel, un nouveau support ou une nouvelle technologie, je me lance, j'expérimente, je comprends. Je suis attirée par l'innovation et le prototypage, là où tout reste à inventer, et je mène chaque projet jusqu'à ses limites, parce que c'est là qu'une idée révèle ce qu'elle vaut.</p>
+    </div>
   </div>
 
   <footer class="foot">Mis à jour en novembre 2026</footer>
@@ -293,7 +324,7 @@ body[data-view="sightrack"]{background:#030b1c}
 
   <h3>Expériences</h3>
   <ul class="tl">
-    <li><div class="d">Depuis mars 2026</div><div><b>Barista – CDI</b><span class="s">Préparation, accueil des clients, mise en avant des produits, caisse et optimisation des ventes</span></div></li>
+    <li><div class="d">Depuis mars 2026</div><div><b>Barista – Starbucks, Paris (CDI)</b><span class="s">Préparation, accueil des clients, mise en avant des produits, caisse et optimisation des ventes</span></div></li>
     <li><div class="d">2022 – 2023</div><div><b>QA tester – <a class="lnk" href="https://store.steampowered.com/app/2247410/Colorless/?l=french" target="_blank" rel="noopener">Colorless ↗</a>, par Radcoon, Paris</b><span class="s">Tests d'assurance qualité (QA) du jeu. Dépliage UV (UV wrapping) et modélisation de plusieurs assets 3D dans Blender.</span></div></li>
     <li><div class="d">Sept. 2023 – juil. 2024</div><div><b>Service civique – Cyberbase, Saint-Denis</b><span class="s">Accompagnement de jeunes adultes en création numérique et photographie. Montée en compétence sur la suite Adobe, photographie, captation, sensibilisation aux écrans.</span></div></li>
     <li><div class="d">Juil. 2023 – févr. 2024</div><div><b>Graphiste – Sentinel, Toulouse</b><span class="s">Création du logo et refonte graphique de la structure, formes vectorielles, patterns, affiches de tournoi.</span></div></li>
