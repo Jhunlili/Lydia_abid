@@ -300,8 +300,9 @@ a.bcard:hover{background:rgba(255,255,255,.05)}
 /* Localisation : drapeau */
 .contactbar .flag{display:inline-block;border-radius:2px;margin-left:2px;box-shadow:0 0 0 1px rgba(255,255,255,.28)}
 
-/* Accueil : contact sous le nom, petit */
-.homecontact{display:flex;flex-wrap:wrap;gap:6px 26px;margin-top:12px;font-size:15px;color:#8a8a8a}
+/* Accueil : contact en bas à gauche, petit */
+#home{display:flex;flex-direction:column;min-height:100vh}
+.homecontact{margin-top:auto;padding-top:60px;display:flex;flex-wrap:wrap;gap:6px 26px;font-size:14px;color:#8a8a8a}
 .homecontact a{border-bottom:1px solid #333;padding-bottom:1px}
 .homecontact a:hover{color:#ff2d2d;border-bottom-color:#ff2d2d}
 
@@ -322,13 +323,6 @@ a.bcard:hover{background:rgba(255,255,255,.05)}
 <!-- ================= INTRO ================= -->
 <main id="home" class="view">
   <h1 class="name">Lydia Abid</h1>
-  <div class="homecontact">
-    <a href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a>
-    <a href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">LinkedIn</a>
-    <!-- itch.io : quand ton lien est prêt, enlève les signes de commentaire autour de la ligne ci-dessous et remplace TON-COMPTE
-    <a href="https://TON-COMPTE.itch.io" target="_blank" rel="noopener">itch.io</a>
-    -->
-  </div>
   <nav class="menu" aria-label="Menu">
     <hr>
     <div class="label">Qui suis-je ?</div>
@@ -342,6 +336,13 @@ a.bcard:hover{background:rgba(255,255,255,.05)}
     <div class="label">Recherche</div>
     <a href="#memoire"><span class="arrow">&gt;</span><span>Mémoire de recherche</span></a>
   </nav>
+  <div class="homecontact">
+    <a href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a>
+    <a href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- itch.io : quand ton lien est prêt, enlève les signes de commentaire autour de la ligne ci-dessous et remplace TON-COMPTE
+    <a href="https://TON-COMPTE.itch.io" target="_blank" rel="noopener">itch.io</a>
+    -->
+  </div>
 </main>
 
 <!-- ================= A PROPOS DE MOI ================= -->
