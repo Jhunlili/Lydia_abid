@@ -300,10 +300,11 @@ a.bcard:hover{background:rgba(255,255,255,.05)}
 /* Localisation : drapeau */
 .contactbar .flag{display:inline-block;border-radius:2px;margin-left:2px;box-shadow:0 0 0 1px rgba(255,255,255,.28)}
 
-/* Accueil : ligne de contact */
-.contactline{display:flex;flex-wrap:wrap;gap:8px 34px;padding-left:clamp(40px,5vw,70px);margin-top:6px;font-size:clamp(18px,2vw,22px)}
-.menu .contactline a{display:inline-block;font-size:inherit;line-height:1.5;border-bottom:1px solid #444;padding-bottom:2px}
-.menu .contactline a:hover{color:#ff2d2d;border-bottom-color:#ff2d2d}
+/* Accueil : contact en pied de page, petit et centré */
+#home{display:flex;flex-direction:column;min-height:100vh}
+.homefoot{margin-top:auto;padding:60px 0 6px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 26px;font-size:14px;color:#8a8a8a}
+.homefoot a{border-bottom:1px solid #333;padding-bottom:1px}
+.homefoot a:hover{color:#ff2d2d;border-bottom-color:#ff2d2d}
 
 /* Lightbox */
 #lb{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:16px;cursor:zoom-out}
@@ -334,16 +335,14 @@ a.bcard:hover{background:rgba(255,255,255,.05)}
     <hr>
     <div class="label">Recherche</div>
     <a href="#memoire"><span class="arrow">&gt;</span><span>Mémoire de recherche</span></a>
-    <hr>
-    <div class="label">Contact</div>
-    <div class="contactline">
-      <a href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a>
-      <a href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">LinkedIn</a>
-      <!-- itch.io : quand ton lien est prêt, enlève les signes de commentaire autour de la ligne ci-dessous et remplace TON-COMPTE
-      <a href="https://TON-COMPTE.itch.io" target="_blank" rel="noopener">itch.io</a>
-      -->
-    </div>
   </nav>
+  <footer class="homefoot">
+    <a href="mailto:lydia.abid@hotmail.com">lydia.abid@hotmail.com</a>
+    <a href="https://www.linkedin.com/in/lydiaabid1/" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- itch.io : quand ton lien est prêt, enlève les signes de commentaire autour de la ligne ci-dessous et remplace TON-COMPTE
+    <a href="https://TON-COMPTE.itch.io" target="_blank" rel="noopener">itch.io</a>
+    -->
+  </footer>
 </main>
 
 <!-- ================= A PROPOS DE MOI ================= -->
